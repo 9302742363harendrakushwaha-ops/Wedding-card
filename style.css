@@ -231,4 +231,61 @@ body, html {
     }
     .dev-text p { font-size: 0.75rem; }
       }
-  
+
+
+
+/* Contact Hub Styling */
+.contact-hub {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 2500;
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+/* Call Button - Gold Theme */
+.contact-icon.call {
+    background: var(--gold);
+    border: 2px solid white;
+}
+
+/* WhatsApp Button - Green Theme */
+.contact-icon.whatsapp {
+    background: #25D366;
+    border: 2px solid white;
+}
+
+/* Animations */
+.contact-icon:hover {
+    transform: scale(1.15) rotate(10deg);
+}
+
+/* Call Button Pulse */
+.contact-icon.call {
+    animation: pulseGold 2s infinite;
+}
+
+@keyframes pulseGold {
+    0% { box-shadow: 0 0 0 0 rgba(184, 142, 47, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(184, 142, 47, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(184, 142, 47, 0); }
+}
+
+@media (max-width: 480px) {
+    .contact-icon { width: 45px; height: 45px; }
+    }
+    
