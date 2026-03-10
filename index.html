@@ -1,1 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation | Jyoti & Deepu</title>
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    
+    
+    <!-- Background Image Layer -->
+    <div class="bg-image"></div>
+
+    <div class="main-container">
+        
+        <!-- SECTION 1: HERO / SAVE THE DATE -->
+        <section class="hero-section">
+            <div class="glass-card">
+                
+                <div class="welcome-text">
+    <span>Welcome To Our Wedding</span>
+    <div class="divider"></div>
+</div>
+ 
+                
+                <div class="card-header">
+                    <p class="date-badge">April 28, 2026</p>
+                    <h2 class="script-font" style="font-size: 3.5rem;">Save the Date</h2>
+                </div>
+
+                <div class="couple-names">
+                    <div class="person">
+                        <img src="jyoti.jpg" alt="Jyoti">
+                        <h3>Jyoti</h3>
+                    </div>
+                    <div class="ampersand">&</div>
+                    <div class="person">
+                        <img src="deepu.jpg" alt="Deepu">
+                        <h3>Deepu</h3>
+                    </div>
+                </div>
+
+                <div class="countdown-container" id="countdown">
+                    <div class="time-box">
+                        <span id="days">00</span>
+                        <p>Days</p>
+                    </div>
+                    <div class="time-box">
+                        <span id="hours">00</span>
+                        <p>Hrs</p>
+                    </div>
+                    <div class="time-box">
+                        <span id="mins">00</span>
+                        <p>Min</p>
+                    </div>
+                    <div class="time-box">
+                        <span id="secs">00</span>
+                        <p>Sec</p>
+                    </div>
+                </div>
+
+                <div class="venue-info">
+                    <p><strong>The Royal Place</strong></p>
+                    <p>Chhatarpur, Ramupura</p>
+                </div>
+
+                <button class="glow-btn" onclick="openRSVP()">I'll Be There</button>
+            </div>
+        </section>
+
+        <!-- SECTION 2: FAMILY MEMBERS -->
+        <section class="family-section">
+            <h2 class="script-font">Meet the Family</h2>
+            <p class="family-subtitle">The Bride's Loved Ones</p>
+            
+            <div class="family-grid">
+                <!-- Member 1 -->
+                <div class="member-card">
+                    <span>👔</span>
+                    <h4>Father</h4>
+                    <p>Shri. [Jodha kushwaha]</p>
+                </div>
+                <!-- Member 2 -->
+                <div class="member-card">
+                    <span>🌸</span>
+                    <h4>Mother</h4>
+                    <p>Smt. [Dya  ]</p>
+                </div>
+                <!-- Member 3 -->
+                <div class="member-card">
+                    <span>💎</span>
+                    <h4>Brother</h4>
+                    <p>[Bijendra ]</p>
+                </div>
+                <!-- Member 4 -->
+                <div class="member-card">
+                    <span>🎀</span>
+                    <h4>Sister</h4>
+                    <p>[Member Name]</p>
+                </div>
+                <!-- Member 5 -->
+                <div class="member-card">
+                    <span>👑</span>
+                    <h4>Mama Ji</h4>
+                    <p>[Member Name]</p>
+                </div>
+                <!-- Member 6 -->
+                <div class="member-card">
+                    <span>✨</span>
+                    <h4>Bua Ji</h4>
+                    <p>[Member Name]</p>
+                </div>
+                <!-- Member 7 -->
+                <div class="member-card">
+                    <span>🌟</span>
+                    <h4>Chacha Ji</h4>
+                    <p>[Member Name]</p>
+                </div>
+                <!-- Member 8 -->
+                <div class="member-card">
+                    <span>🌹</span>
+                    <h4>Dadi Ma</h4>
+                    <p>[Member Name]</p>
+                </div>
+                <!-- Member 9 -->
+                <div class="member-card">
+                    <span>💍</span>
+                    <h4>Bhabhi</h4>
+                    <p>[Member Name]</p>
+                </div>
+                <!-- Member 10 -->
+                <div class="member-card">
+                    <span>🎈</span>
+                    <h4>Cousins</h4>
+                    <p>[Member Name]</p>
+                </div>
+            </div>
+        </section>
+
+        
+        
+        <!-- RSVP Modal -->
+<div id="rsvpModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <div class="modal-body">
+            <h2 class="script-font" style="font-size: 2.5rem;">Shubh Vivah</h2>
+            <div class="shayari">
+                <p>"तारों की बारात है, खुशियों की सौगात है,"</p>
+                <p>"ज्योति और दीपू के मिलन की, यह प्यारी सी रात है।"</p>
+            </div>
+            <p class="hindi-msg">
+                आपकी उपस्थिति हमारे इस विशेष दिन को और भी यादगार बना देगी। <br>
+                <b>हमारे विवाह में पधारने के लिए आपका धन्यवाद!</b>
+            </p>
+            <button class="glow-btn" onclick="closeModal()">Dhanyawad</button>
+        </div>
+    </div>
+</div>
+
+        
+        
+        
+        
+        
+        
+        <div class="dev-badge">
+    <div class="dev-icon">👨‍💻</div>
+    <div class="dev-text">
+        <span>Crafted with ❤️ by</span>
+        <p>Harendra Kushwaha</p>
+        <small>Web Developer</small>
+    </div>
+</div>
+
+        
+        
+    </div>
+
+    <!-- JavaScript Link -->
+    <script src="script.js"></script>
+</body>
+                      </html>
+  
