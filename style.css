@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap');
+
+:root {
+    --gold: #b88e2f;
+    --gold-light: #dfc07d;
+    --dark-text: #2c3e50;
+    --white: #ffffff;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body, html {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fdfaf5;
+    scroll-behavior: smooth;
+}
+
+/* Background Image */
+.bg-image {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: url('https://images.unsplash.com/photo-1519225495810-758965b8ea07?auto=format&fit=crop&w=1920&q=80') center/cover;
+    filter: brightness(0.6);
+    z-index: -1;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* --- THE ANIMATED GOLD CARD --- */
+.glass-card {
+    position: relative;
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    overflow: hidden; /* Light bahar na nikle */
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+/* Moving Gold Light */
+.glass-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(transparent, var(--gold), var(--gold-light), var(--gold), transparent);
+    animation: rotateGold 4s linear infinite;
+    z-index: 1;
+}
+
+/* White Inner Card (Taaki light sirf border pe dikhe) */
+.glass-card::after {
+    content: '';
+    position: absolute;
+    inset: 4px; /* Border thickness */
+    background: white;
+    border-radius: 26px;
+    z-index: 2;
+}
+
+/* Sab kuch light ke upar dikhne ke liye */
+.glass-card > * {
+    position: relative;
+    z-index: 10;
+}
+
+/* Typography */
+.welcome-text span {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 4px;
+    font-size: 0.75rem;
+    color: var(--gold);
+    font-weight: bold;
+}
+
+.divider {
+    width: 40px;
+    height: 2px;
+    background: var(--gold);
+    margin: 10px auto;
+}
+
+.script-font {
+    font-family: 'Great Vibes', cursive;
+    color: var(--gold);
+    line-height: 1.2;
+}
+
+.date-badge {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.couple-names {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.person img {
+    width: 85px; height: 85px;
+    border-radius: 50%;
+    border: 3px solid var(--gold);
+    object-fit: cover;
+}
+
+.ampersand { font-family: 'Cinzel', serif; font-size: 1.5rem; color: var(--gold); }
+
+/* Countdown */
+.countdown-container { display: flex; justify-content: center; gap: 8px; margin: 20px 0; }
+.time-box { background: #fdfaf5; padding: 10px; border-radius: 8px; min-width: 60px; border: 1px solid #eee; }
+.time-box span { display: block; font-size: 1.2rem; font-weight: bold; color: var(--gold); }
+.time-box p { font-size: 0.6rem; text-transform: uppercase; }
+
+.glow-btn {
+    background: var(--gold);
+    color: white; border: none;
+    padding: 15px 30px; border-radius: 50px;
+    font-family: 'Cinzel', serif; font-weight: bold;
+    cursor: pointer; width: 85%; transition: 0.3s;
+}
+
+/* Family Section */
+.family-section { padding: 60px 20px; background: white; text-align: center; }
+.family-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; max-width: 900px; margin: 0 auto; }
+.member-card { background: #fffcf7; padding: 20px; border-radius: 15px; border-left: 4px solid var(--gold); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+
+/* Modal (Popup) */
+.modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); backdrop-filter: blur(8px); }
+.modal-content { background: white; margin: 20% auto; padding: 30px; width: 85%; max-width: 400px; border-radius: 20px; text-align: center; border: 2px solid var(--gold); position: relative; }
+.close-btn { position: absolute; right: 15px; top: 10px; font-size: 28px; cursor: pointer; color: var(--gold); }
+.shayari { font-style: italic; color: var(--gold); margin: 15px 0; line-height: 1.6; }
+
+@keyframes rotateGold { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+@media (min-width: 768px) { .family-grid { grid-template-columns: repeat(4, 1fr); } }
+
+
+
+
+/* Developer Badge Styling */
+.dev-badge {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--gold);
+    padding: 10px 15px;
+    border-radius: 50px 15px 15px 50px; /* Stylish asymmetric corners */
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 10px 25px rgba(184, 142, 47, 0.2);
+    z-index: 2000; /* Taaki ye har cheez ke upar dikhe */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: default;
+}
+
+.dev-icon {
+    background: var(--gold);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: white;
+    box-shadow: 0 0 10px rgba(184, 142, 47, 0.5);
+}
+
+.dev-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.dev-text span {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+}
+
+.dev-text p {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: var(--dark-text);
+    margin: -2px 0;
+}
+
+.dev-text small {
+    font-size: 0.65rem;
+    color: var(--gold);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Hover Effect */
+.dev-badge:hover {
+    transform: scale(1.05) translateX(-5px);
+    background: #fff;
+    box-shadow: 0 15px 35px rgba(184, 142, 47, 0.3);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 480px) {
+    .dev-badge {
+        bottom: 15px;
+        right: 15px;
+        padding: 8px 12px;
+    }
+    .dev-text p { font-size: 0.75rem; }
+      }
+  
