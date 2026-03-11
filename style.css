@@ -288,4 +288,87 @@ body, html {
 @media (max-width: 480px) {
     .contact-icon { width: 45px; height: 45px; }
     }
+
+
+/* --- Venue Section Styling --- */
+.venue-section {
+    padding: 80px 20px;
+    background-color: #fdfaf5;
+    text-align: center;
+}
+
+.venue-card {
+    background: white;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 50px 30px;
+    border-radius: 30px;
+    border: 1px solid rgba(184, 142, 47, 0.3);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+    position: relative;
+}
+
+.location-icon {
+    font-size: 2.5rem;
+    margin: 15px 0;
+    animation: bounce 2s infinite;
+}
+
+.venue-card h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--gold);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.address {
+    font-size: 1rem;
+    color: var(--dark-text);
+    margin-bottom: 20px;
+}
+
+.venue-divider {
+    width: 100px;
+    height: 1px;
+    background: var(--gold);
+    margin: 20px auto;
+}
+
+.map-text {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 25px;
+}
+
+.map-btn {
+    display: inline-block;
+    background: var(--dark-text);
+    color: white;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.4s;
+}
+
+.map-btn:hover {
+    background: var(--gold);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(184, 142, 47, 0.3);
+}
+
+/* Marker Animation */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .venue-card { padding: 30px 15px; }
+    .venue-card h3 { font-size: 1.4rem; }
+}
+
     
