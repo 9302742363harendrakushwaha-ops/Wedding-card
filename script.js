@@ -36,5 +36,61 @@ window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
-      }
+}
 
+
+
+
+
+
+// Gallery Lightbox Logic
+function openLightbox(src) {
+    const lightbox = document.getElementById("lightbox");
+    const img = document.getElementById("lightbox-img");
+    lightbox.style.display = "flex";
+    img.src = src;
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+
+
+
+
+
+
+
+const audio = document.getElementById("weddingAudio");
+const btn = document.querySelector(".music-control");
+const icon = document.getElementById("music-icon");
+
+// Music Toggle Function
+function toggleMusic() {
+    if (audio.paused) {
+        playMusic();
+    } else {
+        pauseMusic();
+    }
+}
+
+function playMusic() {
+    audio.play().then(() => {
+        btn.classList.add("playing");
+        icon.innerText = "⏸️";
+    }).catch(error => {
+        console.log("Playback failed:", error);
+    });
+}
+
+function pauseMusic() {
+    audio.pause();
+    btn.classList.remove("playing");
+    icon.innerText = "🎵";
+}
+
+// Global Interaction: Jab user pehli baar kahin bhi click kare, music activate ho jaye
+document.body.addEventListener('click', function() {
+    // Agar music pehle se nahi chal raha toh start karein (Optional)
+    // audio.play(); 
+}, { once: true });
