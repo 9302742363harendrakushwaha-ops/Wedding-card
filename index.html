@@ -139,27 +139,117 @@
                 </div>
             </div>
         </section>
+        
+        
+        
+        
+        
+        
+       <!-- SECTION: PHOTO GALLERY -->
+<section class="gallery-section">
+    <h2 class="script-font">Beautiful Memories</h2>
+    <p class="gallery-subtitle">Jyoti & Deepu</p>
+    
+    <div class="gallery-grid">
+        <!-- Photo 1 -->
+        <div class="gallery-item" onclick="openLightbox('jyoti.jpg')">
+            <img src="jyoti.jpg" alt="Memory 1">
+            <div class="overlay"><span>View</span></div>
+        </div>
+        <!-- Photo 2 -->
+        <div class="gallery-item" onclick="openLightbox('deepu.jpg')">
+            <img src="deepu.jpg" alt="Memory 2">
+            <div class="overlay"><span>View</span></div>
+        </div>
+        <!-- Photo 3 -->
+        <div class="gallery-item" onclick="openLightbox('couple1.jpg')">
+            <img src="couple1.jpg" alt="Memory 3">
+            <div class="overlay"><span>View</span></div>
+        </div>
+        <!-- Photo 4 -->
+        <div class="gallery-item" onclick="openLightbox('couple2.jpg')">
+            <img src="couple2.jpg" alt="Memory 4">
+            <div class="overlay"><span>View</span></div>
+        </div>
+    </div>
+</section>
 
+<!-- Lightbox Modal (Badi photo dekhne ke liye) -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close-lightbox">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+</div>
+ 
+        
+        
+        
+   
+        
+   <section class="program-section">
+    <h2 class="script-font">Wedding Program</h2>
+    <div class="program-container">
+        <div class="event-box">
+            <span class="event-icon">🟡</span>
+            <h4>Haldi Ceremony</h4>
+            <p>27 April | 10:00 AM onwards</p>
+        </div>
+        <div class="event-box">
+            <span class="event-icon">🐎</span>
+            <h4>Baraat Prasthan</h4>
+            <p>28 April | 06:00 PM</p>
+        </div>
+        <div class="event-box">
+            <span class="event-icon">🍽️</span>
+            <h4>Dinner & Reception</h4>
+            <p>28 April | 08:00 PM onwards</p>
+        </div>
+    </div>
+</section>
+     
+        
+        
+        
+        
+        
+        
+        
+        
+        <!-- Venue & Location Section -->
 <section class="venue-section">
     <div class="venue-card">
         <h2 class="script-font">Wedding Venue</h2>
         <div class="location-icon">📍</div>
-        <h3>Gram Ramupura</h3>
-        <p class="address">
-            Madhya Pradesh
-        </p>
+        <h3>The Royal Palace</h3>
+        <p class="address">Chhatarpur, Ramupura, Madhya Pradesh</p>
         <div class="venue-divider"></div>
-        <p class="map-text">Google Maps par rasta dekhne ke liye niche click karein</p>
+        <p class="map-text">Tap the button below to get directions on Google Maps</p>
         
-        <!-- Sirf Ramupura, MP ki location search karega -->
-        <a href="https://www.google.com/maps/search/?api=1&query=Ramupura+Madhya+Pradesh+India" 
+        <!-- Google Maps Direct Link -->
+        <a href="https://www.google.com/maps/search/?api=1&query=Madhya pradesh+Rampura" 
            target="_blank" class="map-btn">
-            Navigate to Ramupura
+            View on Google Maps
         </a>
     </div>
 </section>
+        
+        
+        
+        
+        
+        
+        <div class="calendar-box">
+    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Jyoti+and+Deepu+Wedding&dates=20260428T133000Z/20260429T043000Z&details=Congratulations!+Joining+the+wedding+at+Rampura.&location=Rampura,+Madhya+Pradesh" 
+       target="_blank" class="calendar-btn">
+       📅 Add to My Calendar
+    </a>
+</div>
+
 
         
+        
+        
+        
+
         
         
         <!-- RSVP Modal -->
@@ -186,7 +276,7 @@
         
         
         
-        
+       
         <div class="dev-badge">
     <div class="dev-icon">👨‍💻</div>
     <div class="dev-text">
@@ -196,21 +286,44 @@
     </div>
 </div>
 
-
-
+     
+        
+        
+        
         <!-- Floating Contact Hub -->
 <div class="contact-hub">
     <!-- Call Button -->
-    <a href="tel:+919302742363" class="contact-icon call" title="Call Us">
+    <a href="tel:+919876543210" class="contact-icon call" title="Call Us">
         <svg viewBox="0 0 24 24" width="24" height="24" fill="white"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27 11.72 11.72 0 003.7.59 1 1 0 011 1V20a1 1 0 01-1 1A15 15 0 013 6a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.7 1 1 0 01-.27 1.11l-2.2 2.2z"/></svg>
     </a>
     
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/919302742363?text=Namaste!%20I%20am%20coming%20to%20the%20wedding." class="contact-icon whatsapp" target="_blank" title="WhatsApp Us">
+    <a href="https://wa.me/919876543210?text=Namaste!%20I%20am%20coming%20to%20the%20wedding." class="contact-icon whatsapp" target="_blank" title="WhatsApp Us">
         <svg viewBox="0 0 24 24" width="24" height="24" fill="white"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217s.231.001.332.005c.109.004.253-.041.397.303.144.344.491 1.199.534 1.286.044.087.073.188.014.303-.058.116-.087.188-.173.289-.087.101-.182.226-.26.303-.094.094-.192.197-.083.385.109.188.484.798 1.04 1.291.714.635 1.314.832 1.502.925.188.094.296.072.405-.054.108-.126.462-.538.585-.722.123-.184.246-.155.412-.094.166.062 1.054.498 1.235.588.181.091.303.134.346.21.043.076.043.439-.101.844z"/></svg>
     </a>
 </div>
 
+        
+        
+        
+        
+        
+        
+   <!-- Music Player Hub -->
+<div class="music-control" onclick="toggleMusic()">
+    <div id="music-icon">🎵</div>
+   <audio id="weddingAudio" preload="auto" loop>
+    <!-- Ye link zayda stable hai -->
+    <source src="wedding.mp3" type="audio/mp3">
+</audio>
+
+
+
+</div>
+     
+        
+        
+        
         
         
     </div>
@@ -218,5 +331,4 @@
     <!-- JavaScript Link -->
     <script src="script.js"></script>
 </body>
-                      </html>
-  
+</html>
