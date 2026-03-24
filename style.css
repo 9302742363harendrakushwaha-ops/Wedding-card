@@ -230,7 +230,7 @@ body, html {
         padding: 8px 12px;
     }
     .dev-text p { font-size: 0.75rem; }
-      }
+}
 
 
 
@@ -287,7 +287,29 @@ body, html {
 
 @media (max-width: 480px) {
     .contact-icon { width: 45px; height: 45px; }
-    }
+}
+
+
+
+
+
+
+
+.program-section { padding: 60px 20px; text-align: center; background: #fffcf7; }
+.program-container { display: flex; flex-direction: column; gap: 20px; max-width: 500px; margin: 30px auto; }
+.event-box { background: white; padding: 20px; border-radius: 15px; border-bottom: 3px solid var(--gold); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+.event-icon { font-size: 2rem; display: block; margin-bottom: 10px; }
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* --- Venue Section Styling --- */
@@ -371,4 +393,166 @@ body, html {
     .venue-card h3 { font-size: 1.4rem; }
 }
 
-    
+
+
+
+
+
+
+
+
+
+
+/* --- Gallery Styling --- */
+.gallery-section {
+    padding: 60px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.gallery-subtitle {
+    font-size: 0.9rem;
+    color: var(--gold);
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Mobile pe 2 columns */
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    aspect-ratio: 1/1; /* Square photos */
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(184, 142, 47, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.overlay span {
+    color: white;
+    border: 1px solid white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.gallery-item:hover img { transform: scale(1.1); }
+.gallery-item:hover .overlay { opacity: 1; }
+
+/* Lightbox UI */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 3000;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    border: 3px solid white;
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 30px; right: 30px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .gallery-grid { grid-template-columns: repeat(4, 1fr); } /* Desktop pe 4 columns */
+}
+
+
+
+
+
+
+
+
+/* Music Button Styling */
+.music-control {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    background: white;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 3000;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+/* Playing Animation */
+.music-control.playing {
+    animation: rotateMusic 3s linear infinite;
+    background: var(--gold);
+    color: white;
+}
+
+@keyframes rotateMusic {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@media (max-width: 480px) {
+    .music-control { width: 40px; height: 40px; top: 15px; right: 15px; }
+}
+
+
+
+
+
+
+
+.calendar-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+.calendar-btn:hover { background: var(--gold); color: white; }
